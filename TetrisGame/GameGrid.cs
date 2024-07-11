@@ -22,12 +22,12 @@ namespace TetrisGame
         {
             Rows = rows;
             Columns = columns;
-            grid = new int[Rows, Columns];
+            grid = new int[rows, columns];
         }
 
         public bool IsInside(int r, int c)
         {
-            return r>=0 && r<Rows && c>=0 && c<Columns;
+            return r >= 0 && r < Rows && c >= 0 && c < Columns;
         }
 
         public bool IsEmpty(int r, int c)
@@ -67,7 +67,7 @@ namespace TetrisGame
         {
             for(int c=0; c< Columns; c++)
             {
-                grid[r,numRows+c] = grid[r,c];
+                grid[r + numRows, c] = grid[r, c];
                 grid[r,c] = 0;
             }
         }
